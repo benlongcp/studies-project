@@ -1,5 +1,6 @@
-//what could this be doing all the way up here?
+//now what could this be doing all the way up here?
 console.log(bacon);
+
 /**
  * STORING DATA (BINDINGS)
  * 
@@ -65,23 +66,24 @@ console.log(greatExampleFarva);
  * 
  */
 
+
+
 //var will stay in a funciton scope
 function cinemaSCOPE(){
     var camera = "click";
 }
 //console.log(camera);
 
-//but not in an if block
+//but NOT in an if block
 if (true){
     var imGlobal = "I'm global";
 }
 
 console.log(imGlobal);
 
-//or in a loop
+//NOR in a loop
 for (var i = 0; i < 1; i++)
     var globalLoopVar = "I'm also global";
-
 console.log(globalLoopVar);
 
 
@@ -95,11 +97,6 @@ console.log(globalLoopVar);
  * 2.   const and let declarations are NOT hoisted and will return an error if referenced before declaration
  * 
  */
-
-
-
-
-
 
 
 //oh that's what that was for
