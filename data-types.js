@@ -190,41 +190,151 @@
  
  
   console.log(1 + null);
-
-  /**
-   * 
-   * 
-   * COMPLEX DATA TYPES
-   * 
-   * 
-   * 
-   * 
-   * 
-   */
-
-  /**
-   * 
-   * 
-   * ARRAYS
-   * 
-   * 
-   */
-
-  /**
-   * 
-   * 
-   * OBJECTS
-   * 
-   * 
-   * 
-   */
-
-  /**
-   * 
-   * 
-   * COPY BY REFERENCE VS VALUE
-   * 
-   * 
-   */
+// /**
+//  * COLLECTIONS
+//  * 
+//  * ARRAYS VS OBJECTS
+//  * 
+//  * Objects are used for storing different values attached to keywords within a single scope
+//  * 
+//  * Arrays are used to collect like-data together and are indexed numerically
+//  * 
+//  * Collections are complex datatypes, meaning they do not have a fixed size in memory are copied by reference and are mutable
+//  * 
+//  */
 
 
+
+[];
+{};
+let testArr = []; // array literal
+let testObj = {}; //object literal
+console.log(testArr);
+console.log(testObj);
+
+
+
+// /**
+//  * ADDING TO ARRAYS
+//  * 
+//  * When populating an array with values, commas (,) are used to separate values into their indexes
+//  * 
+//  * Arrays are indexed numerically and can have values added directly through the index number using bracket notation
+//  * 
+//  * Several Array methods can also add values
+//  *  .push() method
+//  *  .unshift() method
+//  *  .splice() method
+//  * 
+//  * 
+//  * 
+//  * 
+//  */
+
+
+
+//adding a value to an array by direct index
+ testArr[0] = "direct";
+ console.log(testArr);
+
+ //adding data to the end of the array with the .push() method
+ testArr.push("push");
+ console.log(testArr);
+
+ //adding data to the beginning of the array with .unshift() method
+ testArr.unshift("unshift");
+ console.log(testArr);
+
+ //adding data to the middle of the array with the .splice() method
+testArr.splice(2, 0, "spliced in", "also spliced in", "also also spliced in"); // .spice(/start index/, /delete count/, /replacement data/, ... , /replacement data/)
+console.log(testArr);
+
+
+
+// /** 
+//  * ADDING TO OBJECTS
+//  * 
+//  * Populating an object with key/value data, commas are used to separate key/value pairs, (:) colons are used to associate them
+//  *      { key: "value",
+//  *        key2: "value2"
+//  *      }
+//  * 
+//  * objects are otherwise added or appended with direct key access using either bracket or dot notation
+//  * 
+//  * dot notation uses the literal key name with no quotes
+//  * 
+//  * bracket notation uses either the literal key name in quotes or a placeholder not in quotes 
+//  * 
+//  * 
+//  * 
+//  */
+
+
+
+
+//creating a new key:value pair with dot notation
+testObj.key1 = "value1"
+console.log(testObj.key1); //accessing the value with dot notation
+
+//creating a new key:value pair with bracket notation and a non-literal string
+let keyVar = 'key2'
+testObj[keyVar] = "value2"
+console.log(testObj['key2']); // in quotes if literal key
+console.log(testObj[keyVar]); // not in quotes if referenceing the key
+
+
+
+// /**
+//  * REMOVING DATA FROM ARRAYS
+//  * 
+//  * Values in arrays can be removed from the head or tail with .shift() and .pop() methods respectively
+//  * 
+//  * The .splice() method can be used to remove values from the middle of an array
+//  * 
+//  * The .slice() method can be used to remove values in relation to the head or tail of an array
+//  * 
+//  */
+
+
+
+
+//.pop() methods used to remove the "push" data
+testArr.pop(); 
+console.log(testArr);
+
+// .shift() methods used to remove "unshift" data
+testArr.shift();
+console.log(testArr);
+
+//splice method is used to remove the "direct" data
+testArr.splice(0, 1);
+console.log(testArr);
+
+//slice method used to crop the ends of the array
+console.log(testArr.slice(1, 2)); //=> returns a new value
+
+
+
+
+// /** REMOVING DATA FROM OBJECTS
+//  *
+//  * The delete unary operator is used to remove key:value pairs from objects
+//  * 
+//  */
+
+//delete unary operator deletes the key and value corresponding to key1
+delete testObj.key1;
+console.log(testObj);
+
+
+// /** ACCESSING ITEMS IN COLLECTIONS
+//  * 
+//  * Arrays use direct indexing with bracket notation
+//  * 
+//  * objects used key indexing either with bracket notation or dot notation
+//  * 
+//  */
+
+console.log(testArr[0]);
+console.log(testObj.key2);
+console.log(testObj['key2']);
