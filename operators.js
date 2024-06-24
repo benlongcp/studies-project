@@ -197,10 +197,51 @@ console.log
  * 
  */
 
+console.log(!true);
+
+console.log(!false);
+
+console.log(+true);
+
+console.log(+false);
+
+let numba1 = 1;
+
+let numba2 = -2;
+
+console.log(+numba2);
+
+console.log(-numba1);
+
+console.log(typeof 33);
+
+console.log(typeof "string?");
+
+let objection = {
+    key1: "value 1",
+    key2: "value 2",
+    key3: "value 3",
+};
+
+delete objection.key2;
+
+console.log(objection);
+
 
 /**
  * TERNARY OPERATOR
  * 
+ * 0.   only operator in js that takes three operands: a condition to evaluate, an expression if truthy and an an expression if falsey
  * 
+ * 1.   used as an alternative to an if-else statement
+ * 
+ * 2.   condition ? exprIfTrue : exprIfFalse
  * 
  */
+
+
+//we create a condition expression that can evaluate to true or false
+let condition = true;
+
+//condition is evaluated and true or false response is returned
+condition ? console.log(true) : console.log(false);
